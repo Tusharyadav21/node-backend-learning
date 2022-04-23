@@ -11,7 +11,7 @@ app.use(morgan('dev'));
 app.use(express.json()); //get data in json format. (Middleware)
 
 app.use((req, res, next) => {
-  console.log('Hello MW');
+  console.log('Hello from Middleware');
   next();
 });
 
