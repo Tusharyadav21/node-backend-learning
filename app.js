@@ -6,7 +6,9 @@ const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
-app.use(morgan('dev'));
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
 
 app.use(express.json()); //get data in json format. (Middleware)
 
@@ -24,7 +26,4 @@ app.use((req, res, next) => {
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 
-const port = 3000;
-app.listen(port, () => {
-  console.log(`listening on port ${port}`);
-});
+module.exports = app;
