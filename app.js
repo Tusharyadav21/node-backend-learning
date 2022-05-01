@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json()); //get data in json format. (Middleware)
 
 app.use((req, res, next) => {
-  console.log('Hello from Middleware');
+  console.log('Hello from Middleware ');
   next();
 });
 

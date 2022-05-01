@@ -19,7 +19,7 @@ mongoose
   })
   .then(() => {
     // console.log(con.connections);
-    console.log('DB connected');
+    console.log('MongoDB connected');
   });
 
 const port = process.env.PORT;
